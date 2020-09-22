@@ -1,0 +1,20 @@
+<h1>Progressing</h1>
+
+<% if user_signed_in? %>
+
+<h2> ようこそ <%= current_user.name %> さん</h2>
+
+  <h4> メールアドレス： <%= current_user.email %> </h4>
+  <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+
+  <% elsif admin_signed_in? %>
+  <li>管理者</li>
+  <li><%= link_to "ログアウト", destroy_admin_session_path, method: :delete %></li>
+<% else %>
+
+  <h2>利用時はログインしてください</h2>
+  <%= link_to "ログイン", new_user_session_path, class: 'post' %>
+  <%= link_to "新規登録", new_user_registration_path, class: 'post' %>
+  <%= link_to "管理者ログイン", admin_session_path, class: 'post' %>
+
+<% end %>
