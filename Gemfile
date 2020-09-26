@@ -55,3 +55,5 @@ gem "carrierwave"
 gem "will_paginate"
 
 gem "devise"
+
+gem "config"

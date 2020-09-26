@@ -1,4 +1,4 @@
-<h2>Log in</h2>
+<h2>ログイン</h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 
@@ -38,3 +38,5 @@
 <% end %>
 
 <p><%= link_to "トップページ", root_path %></p>
+
+<p><%= link_to "パスワードリセット", new_user_password_path %></p>
