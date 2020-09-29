@@ -7,6 +7,8 @@
   <h4> メールアドレス： <%= current_user.email %> </h4>
   <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
 
+  <%= link_to "進捗ポスト", users_show_path %>
+
   <% elsif admin_signed_in? %>
   <li>管理者</li>
   <li><%= link_to "ログアウト", destroy_admin_session_path, method: :delete %></li>
